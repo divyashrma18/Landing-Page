@@ -73,7 +73,7 @@
   }
   
   .section4-data .row .card1:hover img {
-    transform: scale(1.25); /* Scale up slightly on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
   }
   .view-project-btn {
     position: absolute;
