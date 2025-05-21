@@ -1,0 +1,129 @@
+.section5{
+    height: 850px;
+    width: 100%;
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 120px;
+
+}
+.section5-head h1{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+.section5-head p{
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF99;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 34px;
+    letter-spacing: 1px;
+}
+ .section5-card .stars{
+color: #FF520E;
+display: flex;
+align-items: center;
+gap: 3px;
+}
+.section5-data{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 1120px;
+    margin-left: 190px;
+    /* background-color: crimson; */
+}
+.section5-card{
+    width: 340px;
+    height: 260px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   padding-left: 50px;
+    justify-content: center;
+    gap: 30px;
+    background-color: #0F0F0F99;
+}
+.section5-card h3{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    width: 220px;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+
+}
+.user-details img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.user-details .user-name .name{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+
+}
+.user-details .user-name .pos{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+.carousel-container {
+    width: 1140px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Fog effect */
+  .carousel-container::before,
+  .carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+  }
+  
+  .carousel-container::before {
+    left: -70px;
+    background: linear-gradient(to right, #0D0D0D 50%, transparent);
+  }
+  
+  .carousel-container::after {
+    right: -70px;
+    background: linear-gradient(to left, #0D0D0D 50%, transparent);
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+  }
+  
+  
+  .section5-data {
+    display: none; /* hide original static layout */
+  }
+  
+  
