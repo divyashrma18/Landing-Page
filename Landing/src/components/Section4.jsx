@@ -22,8 +22,8 @@ const Section4 = () => {
         const dx = cursorPos.x - prev.x;
         const dy = cursorPos.y - prev.y;
         return {
-          x: prev.x + dx * 0.5,
-          y: prev.y + dy * 0.5,
+          x: prev.x + dx * 0.8,
+          y: prev.y + dy * 0.8,
         };
       });
       animationFrame = requestAnimationFrame(animateBtn);
