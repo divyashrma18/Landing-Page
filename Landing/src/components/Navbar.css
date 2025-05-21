@@ -1,6 +1,21 @@
 .logo {
     color: white;
   }
+  .navbar {
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .navbar.scrolled {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4); /* translucent black */
+    backdrop-filter: blur(10px);
+    padding: 30px 160px; /* optional: shrink on scroll */
+  }
   
   .navbar {
     display: flex;
