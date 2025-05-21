@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Section5.css';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { FaStar } from "react-icons/fa";
 
 const testimonials = [
@@ -34,15 +34,31 @@ const testimonials = [
   }
 ];
 
-// Duplicate the array for seamless looping
+// Duplicate for infinite scroll
 const loopedTestimonials = [...testimonials, ...testimonials];
 
 const Section5 = () => {
+  const headRef = useRef(null);
+  const isInView = useInView(headRef, { amount: 0.4, once: true });
+
   return (
     <div className="section5">
-      <div className="section5-head">
-        <h1>Our results.</h1>
-        <p>Hear what our clients have to say about our team and our services.</p>
+      <div className="section5-head" ref={headRef}>
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          Our results.
+        </motion.h1>
+
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        >
+          Hear what our clients have to say about our team and our services.
+        </motion.p>
       </div>
 
       <div className="carousel-container">
