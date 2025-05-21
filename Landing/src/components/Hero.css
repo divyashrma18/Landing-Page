@@ -19,7 +19,101 @@
     z-index: 0;
     pointer-events: none;
   }
+  .hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+ .hero-text h1{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 62px;
+    width: 800px;
+    line-height: 80px;
+    padding-left: 150px;
+    padding-top: 100px;
+
+
+ } 
   
-  
-  
-  
+ .hero-text > p{
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF99;
+    font-size: 20px;
+    width: 800px;
+    padding-left: 150px;
+
+
+ } 
+ .hero-btns{
+    margin-left: 150px;
+    display: flex;
+    gap: 50px;
+ }
+ .hero-btns .view-plans {
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 18px;
+    background-color: #FF520E;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.hero-btns .learn-more {
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 18px;
+   border: 1px solid #FF520E;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+  cursor: pointer;
+    
+}
+.view-plans p,
+.learn-more p {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 24px; /* Adjust this as needed to fit the text */
+  display: inline-block;
+}
+
+.view-plans p span,
+.learn-more p span {
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* default and hover spans */
+.view-plans p span:first-child,
+.learn-more p span:first-child {
+  transform: translateY(0);
+}
+
+.view-plans p span:last-child,
+.learn-more p span:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+/* hover effect */
+.view-plans:hover p span:first-child,
+.learn-more:hover p span:first-child {
+  transform: translateY(-100%);
+}
+
+.view-plans:hover p span:last-child,
+.learn-more:hover p span:last-child {
+  transform: translateY(0);
+}
