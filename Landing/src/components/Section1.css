@@ -1,0 +1,92 @@
+.section1 {
+    width: 88%;
+    min-height: 90px;
+    height: auto;
+    background-color: #0D0D0D;
+    margin: 0px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.section1-images {
+    display: flex;
+    gap: 4vw;
+    width: fit-content;
+    animation: scrollInfinite 25s linear infinite;
+    padding: 0 2%;
+}
+
+.section1-img {
+    width: clamp(120px, 12vw, 153px);
+    height: auto;
+    aspect-ratio: 153/38;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .section1 {
+        min-height: 70px;
+        padding: 15px 0;
+    }
+    
+    .section1-images {
+        gap: 8vw;
+        animation-duration: 15s;
+    }
+    
+    .section1-img {
+        width: clamp(80px, 20vw, 120px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section1 {
+        min-height: 80px;
+        padding: 18px 0;
+    }
+    
+    .section1-images {
+        gap: 6vw;
+        animation-duration: 20s;
+    }
+}
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-55%);
+    }
+}
+.section1::before,
+.section1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px; /* Adjust if needed */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section1::before {
+  left: 0;
+  background: linear-gradient(to right, #0D0D0D 70%, transparent);
+}
+
+.section1::after {
+  right: 0;
+  background: linear-gradient(to left, #0D0D0D 70%, transparent);
+}
+
+.section1-images {
+  position: relative; /* ensure the fog layers overlay this */
+  z-index: 0;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import './Hero.css'
 import Navbar from './Navbar'
 import { motion } from 'framer-motion'
+import Section1 from './Section1'
 
 const Hero = () => {
   return (
@@ -45,6 +46,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+      <Section1 />
     </div>
   )
 }
