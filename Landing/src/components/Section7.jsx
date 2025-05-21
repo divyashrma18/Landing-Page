@@ -3,12 +3,12 @@ import './Section7.css';
 import { motion, useInView } from 'framer-motion';
 
 const teamData = [
-  { id: 1, name: 'Jane Doe', position: 'Lead Designer', img: './images/section7-1.avif' },
-  { id: 2, name: 'John Smith', position: 'Developer', img: './images/section7-2.avif' },
-  { id: 3, name: 'Alice Johnson', position: 'Marketing Head', img: './images/section7-3.avif' },
-  { id: 4, name: 'Bob Brown', position: 'Product Manager', img: './images/section7-4.webp' },
-  { id: 5, name: 'Eva Green', position: 'UX Designer', img: './images/section7-5.avif' },
-  { id: 6, name: 'Mark Black', position: 'QA Engineer', img: './images/section7-6.avif' },
+  { id: 1, name: 'Jane Doe', position: 'Lead Designer', img: './images/section7-1.avif', twitter: 'https://twitter.com/janedoe' },
+  { id: 2, name: 'John Smith', position: 'Developer', img: './images/section7-2.avif', twitter: 'https://twitter.com/johnsmith' },
+  { id: 3, name: 'Alice Johnson', position: 'Marketing Head', img: './images/section7-3.avif', twitter: 'https://twitter.com/alicejohnson' },
+  { id: 4, name: 'Bob Brown', position: 'Product Manager', img: './images/section7-4.webp', twitter: 'https://twitter.com/bobbrown' },
+  { id: 5, name: 'Eva Green', position: 'UX Designer', img: './images/section7-5.avif', twitter: 'https://twitter.com/evagreen' },
+  { id: 6, name: 'Mark Black', position: 'QA Engineer', img: './images/section7-6.avif', twitter: 'https://twitter.com/markblack' },
 ];
 
 const Section7 = () => {
@@ -128,10 +128,13 @@ const Section7 = () => {
             }}
           >
             {getVisibleCards().map((team, idx) => (
-              <div
+              <a
                 key={team.id}
+                href={team.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="team-image-wrapper"
-                style={{ width: `${cardWidth}px`, flexShrink: 0 }}
+                style={{ width: `${cardWidth}px`, flexShrink: 0, position: 'relative', cursor: 'pointer' }}
                 onMouseEnter={(e) => handleMouseEnter(e, idx)}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
@@ -157,7 +160,8 @@ const Section7 = () => {
                       left: btnPos.x,
                       pointerEvents: 'none',
                       transform: 'translate(-50%, -100%)',
-                      backgroundColor: '#FF520E',
+                      backgroundColor: ' rgba(255, 77, 0, 0.3)',
+                      border : '1px solid #ff4d00',
                       color: 'white',
                       padding: '6px 14px',
                       borderRadius: '20px',
@@ -172,7 +176,7 @@ const Section7 = () => {
                     View Profile
                   </motion.div>
                 )}
-              </div>
+              </a>
             ))}
           </motion.div>
         </div>

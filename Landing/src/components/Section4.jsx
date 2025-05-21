@@ -7,12 +7,10 @@ const Section4 = () => {
   const isInView = useInView(headRef, { amount: 0.5, once: true });
 
   const cardRefs = useRef([]);
-  const rowRefs = useRef([]);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [btnPos, setBtnPos] = useState({ x: 0, y: 0 });
-  const [entryPos, setEntryPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     let animationFrame;
@@ -40,7 +38,6 @@ const Section4 = () => {
     const rect = cardRefs.current[index].getBoundingClientRect();
     const x = e.clientX - rect.left + 30;
     const y = e.clientY - rect.top - 20;
-    setEntryPos({ x, y });
     setCursorPos({ x, y });
     setBtnPos({ x, y });
     setHoveredIndex(index);
@@ -90,7 +87,6 @@ const Section4 = () => {
           const rowRef = useRef(null);
           const isRowInView = useInView(rowRef, { amount: 0.4 });
 
-          // Slide direction: alternate left-right-left
           const fromX = rowIndex % 2 === 0 ? -100 : 100;
 
           return (
@@ -112,23 +108,35 @@ const Section4 = () => {
                     onMouseEnter={(e) => handleMouseEnter(e, index)}
                     onMouseMove={(e) => handleMouseMove(e, index)}
                     onMouseLeave={handleMouseLeave}
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: 'pointer', position: 'relative' }}  // important for absolute button inside
                   >
                     <img src={cardImages[index]} alt={`Logo ${index + 1}`} />
+
+                    {/* Show the button only on hovered card */}
                     {hoveredIndex === index && (
-                      <motion.button
+                      <button
                         className="view-project-btn"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
                         style={{
-                          left: `${btnPos.x}px`,
-                          top: `${btnPos.y}px`,
+                          position: 'absolute',
+                          top: btnPos.y,
+                          left: btnPos.x,
+                          transform: 'translate(-50%, -100%)',
+                          pointerEvents: 'none',
+                          transition: 'top 0.1s ease, left 0.1s ease',
+                          backgroundColor: '#FF520E',
+                          color: '#fff',
+                          padding: '6px 14px',
+                          borderRadius: '20px',
+                          fontWeight: '600',
+                          fontSize: '0.9rem',
+                          boxShadow: '0 3px 6px rgba(255, 82, 14, 0.5)',
+                          userSelect: 'none',
+                          whiteSpace: 'nowrap',
+                          zIndex: 10,
                         }}
                       >
                         View Project
-                      </motion.button>
+                      </button>
                     )}
                   </div>
                 );
