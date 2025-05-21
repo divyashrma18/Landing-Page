@@ -1,0 +1,25 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D0D0D;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Neon blur glow */
+  .orange-glow {
+    position: absolute;
+    top: -200px;
+    left: 350px;
+    width: 1200px;
+    height: 750px;
+    background: radial-gradient(circle, #FF520E 0%, transparent 70%);
+    filter: blur(180px);
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  
+  
+  

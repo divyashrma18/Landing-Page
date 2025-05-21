@@ -1,0 +1,99 @@
+.logo {
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 160px;
+  }
+  
+  .nav-items {
+    font-family: "Inter", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    z-index: 999;
+    margin-left: 120px;
+  }
+  
+  /* ------------ NAV TEXT ANIMATION ------------- */
+  
+  .book-call p{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+   
+  }
+  .nav-items p {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .nav-items p {
+    height: 40px;
+  }
+  
+  .book-call p {
+    font-family: "Inter", sans-serif;
+    color: white;
+    border: 1px solid #FF520E;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Span styles */
+  .nav-items p span,
+  .book-call p span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: inherit;
+    transition: transform 0.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+
+  }
+  
+  .nav-items p span:first-child,
+  .book-call p span:first-child {
+    color: white;
+    transform: translateY(0);
+    position: relative; /* only top layer is positioned normally */
+  }
+  
+  .nav-items p span:last-child,
+  .book-call p span:last-child {
+    color: #FF520E;
+    transform: translateY(100%);
+  }
+  
+  /* Hover animation */
+  .nav-items p:hover span:first-child,
+  .book-call p:hover span:first-child {
+    transform: translateY(-100%);
+  }
+  
+  .nav-items p:hover span:last-child,
+  .book-call p:hover span:last-child {
+    transform: translateY(0);
+  }
+  
