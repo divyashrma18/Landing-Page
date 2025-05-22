@@ -1,5 +1,6 @@
 
 import './App.css'
+import ContactForm from './components/ContactForm'
 import Hero from './components/Hero'
 import Section2 from './components/Section2'
 import Section3 from './components/Section3'
@@ -22,6 +23,7 @@ function App() {
     <Section6 />
     <Section7 />
     <Section8 />
+    <ContactForm />
     </>
   )
 }

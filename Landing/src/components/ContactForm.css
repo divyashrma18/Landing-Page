@@ -1,0 +1,139 @@
+.contactform-container {
+    display: flex;
+    height: 100vh;
+    background-color: #0D0D0D;
+    color: #fff;
+    position: relative;     /* ⬅️ Required for absolute glow */
+    overflow: hidden;       /* Ensures glow stays contained */
+    z-index: 1;
+    padding-top: 80px;
+  }
+  
+  .map-section {
+    /* background-color: yellow; */
+    flex: 1;
+   height: 600px;
+width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 140px;
+  }
+  
+  .map-section iframe {
+    /* width: 100%; */
+    /* height: 100%; */
+    border: none;
+    border-radius: 20px;
+    max-width: 550px;
+  }
+  
+  
+  .form-section {
+    flex: 1;
+    border-radius: 10px;
+    height: 590px;
+    /* padding: 3rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* Required for absolute children */
+    overflow: hidden;   /* Ensures glow stays within */
+    z-index: 1;
+    /* background-color: crimson; */
+  }
+  .orange-glow1 {
+    position: absolute;
+    top: 200px;
+    left: -80px; /* More negative = more to the left */
+    width:100%;/* Increase size so it spills out nicely */
+    height: 500px;
+    background: radial-gradient(circle, #FF520E 0%, transparent 50%);
+    filter: blur(200px);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+  }
+   
+
+  .form-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 42px;
+  }
+  
+  .form-section input,
+  .form-section textarea {
+    font-family: "Inter", sans-serif;
+    width: 480px;
+    color: white;
+    border: 1px solid #444;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    resize: none;
+  }
+
+
+  
+  .form-section button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  .send-button {
+    position: relative;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    background-color: #FF520E;
+    color: white;
+    width: 480px;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 50px; /* same as height to vertically center text */
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+  
+  .send-button span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    line-height: 50px; /* vertical center */
+    transition: transform 0.4s ease;
+    pointer-events: none; /* so clicks go to button */
+  }
+  
+  .send-button span:first-child {
+    position: relative; /* normal flow */
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .send-button span:last-child {
+    transform: translateY(100%);
+  }
+  
+  .send-button:hover span:first-child {
+    transform: translateY(-100%);
+  }
+  
+  .send-button:hover span:last-child {
+    transform: translateY(0);
+  }
+  
+  /* Disabled state */
+  .send-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
