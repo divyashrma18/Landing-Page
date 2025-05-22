@@ -73,11 +73,12 @@ cursor: none;
     font-size: 1rem;
     line-height: 1.5;
   }
+ 
   .faq-answer {
     overflow: hidden;
+    will-change: max-height, opacity;
   }
   
- 
   .faq-cursor-button {
     position: absolute;
     pointer-events: none;

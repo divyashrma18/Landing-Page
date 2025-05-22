@@ -95,37 +95,42 @@ const Section8 = () => {
           </div>
         )}
 
-        {faqs.map((question, index) => (
-          <motion.div
-            key={index}
-            className="faq-item"
-            onClick={() => toggleFAQ(index)}
-            initial={{ y: 50, opacity: 0 }}
-            animate={isInView ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.4, delay: 0.1 * index }}
-          >
-            <div className="faq-question">
-              <span>{question}</span>
-              <span className="faq-icon">
-                {activeIndex === index ? <FaMinus /> : <FaPlus />}
-              </span>
-            </div>
-            <AnimatePresence initial={false}>
-              {activeIndex === index && (
-                <motion.div
-                  className="faq-answer"
-                  initial={{ scaleY: 0, opacity: 0 }}
-                  animate={{ scaleY: 1, opacity: 1 }}
-                  exit={{ scaleY: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  style={{ transformOrigin: 'top' }}
-                >
-                  <p>This is a sample answer for: {question}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        ))}
+{faqs.map((question, index) => (
+ <motion.div
+ key={index}
+ className="faq-item"
+ onClick={() => toggleFAQ(index)}
+ initial={{ y: 50, opacity: 0 }}
+ animate={isInView ? { y: 0, opacity: 1 } : {}}
+ transition={{ duration: 0.4, delay: 0.1 * index }}
+ layout
+>
+
+    <div className="faq-question">
+      <span>{question}</span>
+      <span className="faq-icon">
+        {activeIndex === index ? <FaMinus /> : <FaPlus />}
+      </span>
+    </div>
+    <AnimatePresence initial={false}>
+  {activeIndex === index && (
+    <motion.div
+      className="faq-answer"
+      initial={{ maxHeight: 0, opacity: 0 }}
+      animate={{ maxHeight: 500, opacity: 1 }}
+      exit={{ maxHeight: 0, opacity: 0 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      style={{ overflow: 'hidden' }}
+    >
+      <p>This is a sample answer for: {question}</p>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
+  </motion.div>
+))}
+
       </div>
     </div>
   );
