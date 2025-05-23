@@ -58,7 +58,7 @@ const Section8 = () => {
   };
 
   return (
-    <div className="section8" ref={ref}>
+    <div className="section8" ref={ref} id='section8'>
       <div className="section8-head">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}

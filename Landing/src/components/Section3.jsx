@@ -18,7 +18,7 @@ const Section3 = () => {
   const isTop4InView = useInView(top4Ref, { amount: 0.5 });
 
   return (
-    <div className="section3" ref={section3Ref}>
+    <div className="section3" ref={section3Ref} id='section3'>
       <div className="section3-head">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}

@@ -7,12 +7,19 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight * 0.1); // adjust threshold if needed
+      setScrolled(window.scrollY > window.innerHeight * 0.1);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -21,11 +28,13 @@ const Navbar = () => {
       </div>
 
       <div className="nav-items">
-        <p><span>Process</span><span>Process</span></p>
-        <p><span>Work</span><span>Work</span></p>
-        <p><span>Services</span><span>Services</span></p>
-        <p><span>About</span><span>About</span></p>
-        <p><span>FAQs</span><span>FAQs</span></p>
+        <p onClick={() => scrollToSection('section3')}>
+          <span>Process</span><span>Process</span>
+        </p>
+        <p onClick={() => scrollToSection('section4')}><span>Work</span><span>Work</span></p>
+        <p onClick={() => scrollToSection('section6')}><span>Services</span><span>Services</span></p>
+        <p onClick={() => scrollToSection('section7')}><span>About</span><span>About</span></p>
+        <p onClick={() => scrollToSection('section8')}><span>FAQs</span><span>FAQs</span></p>
       </div>
 
       <div className="book-call">

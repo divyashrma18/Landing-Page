@@ -93,7 +93,7 @@ const Section7 = () => {
   const offsetX = -((cardWidth + gap) * startIndex);
 
   return (
-    <div className="section7">
+    <div className="section7" id='section7'>
       <div className="section7-head" ref={headRef}>
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
