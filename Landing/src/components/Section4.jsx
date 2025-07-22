@@ -108,11 +108,10 @@ const Section4 = () => {
                     onMouseEnter={(e) => handleMouseEnter(e, index)}
                     onMouseMove={(e) => handleMouseMove(e, index)}
                     onMouseLeave={handleMouseLeave}
-                    style={{ cursor: 'pointer', position: 'relative' }}  // important for absolute button inside
+                    style={{ cursor: 'pointer', position: 'relative' }}  
                   >
                     <img src={cardImages[index]} alt={`Logo ${index + 1}`} />
 
-                    {/* Show the button only on hovered card */}
                     {hoveredIndex === index && (
                       <button
                         className="view-project-btn"

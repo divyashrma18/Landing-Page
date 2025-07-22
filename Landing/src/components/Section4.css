@@ -69,11 +69,11 @@
   .section4-data .row .card1 img {
     z-index: 1;
     position: relative;
-    transition: transform 0.4s ease; /* Add transition for smooth scaling */
+    transition: transform 0.4s ease; 
   }
   
   .section4-data .row .card1:hover img {
-    transform: scale(1.05); /* Scale up slightly on hover */
+    transform: scale(1.05); 
   }
   .view-project-btn {
     position: absolute;
@@ -88,9 +88,9 @@
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    user-select: none;
+    /* user-select: none; */
     z-index: 10;
-    transition: background-color 0.3s ease, left 0.1s ease, top 0.1s ease; /* <-- smoother follow */
+    transition: background-color 0.3s ease, left 0.1s ease, top 0.1s ease; 
   }
   
   

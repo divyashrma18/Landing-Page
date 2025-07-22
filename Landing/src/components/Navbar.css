@@ -12,9 +12,9 @@
   
   .navbar.scrolled {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.4); /* translucent black */
-    backdrop-filter: blur(10px);
-    padding: 30px 160px; /* optional: shrink on scroll */
+    background-color: rgba(0, 0, 0, 0.4); 
+    /* backdrop-filter: blur(10px); */
+    padding: 30px 160px; 
   }
   
   .navbar {
@@ -35,7 +35,6 @@
     margin-left: 120px;
   }
   
-  /* ------------ NAV TEXT ANIMATION ------------- */
   
   .book-call p{
     position: relative;
@@ -72,7 +71,6 @@
     align-items: center;
   }
   
-  /* Span styles */
   .nav-items p span,
   .book-call p span {
     display: block;
@@ -92,7 +90,7 @@
   .book-call p span:first-child {
     color: white;
     transform: translateY(0);
-    position: relative; /* only top layer is positioned normally */
+    position: relative; 
   }
   
   .nav-items p span:last-child,
@@ -101,7 +99,7 @@
     transform: translateY(100%);
   }
   
-  /* Hover animation */
+
   .nav-items p:hover span:first-child,
   .book-call p:hover span:first-child {
     transform: translateY(-100%);

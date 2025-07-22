@@ -22,8 +22,8 @@ const Section7 = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [btnPos, setBtnPos] = useState({ x: 0, y: 0 });
 
-  const cardWidth = 310; // Approx width of a card, adjust to your CSS
-  const gap = 30;        // Gap between cards
+  const cardWidth = 310; 
+  const gap = 30;        
 
   useEffect(() => {
     let animationFrame;

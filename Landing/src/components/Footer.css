@@ -14,7 +14,7 @@
   
   .footer-content {
     position: relative;
-    z-index: 2; /* ensures it's above fog */
+    z-index: 2; 
     display: flex;
     justify-content: center;
     align-items: center;

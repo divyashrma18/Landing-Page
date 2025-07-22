@@ -14,7 +14,7 @@ const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once: true }); // Triggers when 50% in view
+  const isInView = useInView(ref, { amount: 0.5, once: true }); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
