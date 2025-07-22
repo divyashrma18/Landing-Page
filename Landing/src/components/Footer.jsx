@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="frows">
             <div className="frow1">
               {["Process", "Work", "About", "FAqs"].map((text, idx) => (
-                <p className="footer-animate" key={idx}>
+                <p className='footer-animate' key={idx}>
                   <span>{text}</span>
                   <span>{text}</span>
                 </p>

@@ -6,7 +6,7 @@ const Section2 = () => {
   const ref = useRef();
   const isInView = useInView(ref, {
     once: true,
-    amount: 0.6, // Trigger when 50% of the section is visible
+    amount: 0.6, 
   });
   
   return (

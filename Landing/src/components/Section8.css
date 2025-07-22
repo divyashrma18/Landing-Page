@@ -40,9 +40,7 @@ position: relative;
 cursor: none;
   }
   
-  .faq-item {
-    /* border-bottom: 1px solid #333; */
-   
+  .faq-item {   
     padding: 1rem 0;
     cursor: pointer;
   }
@@ -59,7 +57,7 @@ cursor: none;
   }
   
   .faq-icon {
-    color: #ff4d00; /* orange like in your screenshot */
+    color: #ff4d00; 
     font-size: 1rem;
   }
   

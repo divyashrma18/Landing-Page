@@ -10,7 +10,6 @@ const Section1 = () => {
 './images/section1-1.svg',
 './images/section1-1.svg',  ];
 
-  // Duplicate the array 4 times for a smoother loop
   const allImages = [...images, ...images, ...images, ...images];
 
   return (

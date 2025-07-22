@@ -19,9 +19,9 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+         initial={{x:-100, opacity:0}}
+         animate={{x:0,opacity:1}}
+         transition={{duration:0.8, delay:0.2, ease:'easeOut'}}
         >
           Design agency crafting minimal brand identities that speaks volumes.
         </motion.p>

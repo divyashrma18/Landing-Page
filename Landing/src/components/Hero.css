@@ -7,7 +7,6 @@
     padding-top: 150px;
   }
   
-  /* Neon blur glow */
   .orange-glow {
     position: absolute;
     top: -200px;
@@ -84,7 +83,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 24px; /* Adjust this as needed to fit the text */
+  height: 24px; 
   display: inline-block;
 }
 
@@ -94,7 +93,6 @@
   transition: transform 0.4s ease;
 }
 
-/* default and hover spans */
 .view-plans p span:first-child,
 .learn-more p span:first-child {
   transform: translateY(0);
@@ -108,7 +106,6 @@
   transform: translateY(100%);
 }
 
-/* hover effect */
 .view-plans:hover p span:first-child,
 .learn-more:hover p span:first-child {
   transform: translateY(-100%);

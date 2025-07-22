@@ -36,7 +36,6 @@ gap: 3px;
     gap: 30px;
     width: 1120px;
     margin-left: 190px;
-    /* background-color: crimson; */
 }
 .section5-card{
     width: 340px;
@@ -45,7 +44,6 @@ gap: 3px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
    padding-left: 50px;
     justify-content: center;
     gap: 30px;
@@ -92,7 +90,6 @@ gap: 3px;
     position: relative;
   }
   
-  /* Fog effect */
   .carousel-container::before,
   .carousel-container::after {
     content: '';
@@ -102,7 +99,7 @@ gap: 3px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
   }
   
   .carousel-container::before {
@@ -123,7 +120,7 @@ gap: 3px;
   
   
   .section5-data {
-    display: none; /* hide original static layout */
+    display: none; 
   }
   
   

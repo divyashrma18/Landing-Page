@@ -34,7 +34,6 @@ const testimonials = [
   }
 ];
 
-// Duplicate for infinite scroll
 const loopedTestimonials = [...testimonials, ...testimonials];
 
 const Section5 = () => {

@@ -6,7 +6,6 @@ const Section3 = () => {
   const section3Ref = useRef(null);
   const isHeadInView = useInView(section3Ref, { amount: 0.2, once: true });
 
-  // Refs for individual .top items
   const top1Ref = useRef(null);
   const top2Ref = useRef(null);
   const top3Ref = useRef(null);

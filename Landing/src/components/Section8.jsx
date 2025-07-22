@@ -23,7 +23,6 @@ const Section8 = () => {
   const [smoothPos, setSmoothPos] = useState({ x: 0, y: 0 });
   const [isCursorInside, setIsCursorInside] = useState(false);
 
-  // Lerp animation for smooth cursor follow
   useEffect(() => {
     let animationFrame;
 
@@ -31,7 +30,7 @@ const Section8 = () => {
       setSmoothPos((prev) => {
         const dx = targetPos.x - prev.x;
         const dy = targetPos.y - prev.y;
-        const speed = 0.1; // adjust for smoothness (lower = slower)
+        const speed = 0.1; 
         return {
           x: prev.x + dx * speed,
           y: prev.y + dy * speed

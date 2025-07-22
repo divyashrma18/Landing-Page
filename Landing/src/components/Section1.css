@@ -71,7 +71,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 80px; /* Adjust if needed */
+  width: 80px; 
   z-index: 1;
   pointer-events: none;
 }
@@ -87,6 +87,6 @@
 }
 
 .section1-images {
-  position: relative; /* ensure the fog layers overlay this */
+  position: relative; 
   z-index: 0;
 }
